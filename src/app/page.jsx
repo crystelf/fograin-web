@@ -76,7 +76,7 @@ export default function HomePage() {
 
               <Button
                 as="a"
-                href="https://crystelf.top/"
+                href="https://lab.crystelf.top/"
                 target="_blank"
                 rel="noopener noreferrer"
                 colorPalette="purple"

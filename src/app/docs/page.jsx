@@ -45,7 +45,7 @@ export default function DocsPage() {
 
       <FadeInWrapper delay={0.2}>
         <Box flex="1" px={{ base: 6, md: 12 }} pt={32} pb={16}>
-          <VStack align="start" spacing={10} color="white">
+          <VStack align="center" spacing={10} color="white">
             <Box>
               <Heading size="xl" mb={4}>
                 加入雾雨生电服务器
