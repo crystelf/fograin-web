@@ -1,38 +1,29 @@
-import { Flex, Box, Spacer, IconButton, Link } from "@chakra-ui/react";
-import { FaGithub, FaDiscord } from "react-icons/fa";
+import { Flex, Box, Spacer, Link } from "@chakra-ui/react";
+import { ColorModeButton } from "@/components/ui/color-mode";
 
-export default function Navbar() {
+export default function Navbar({ iconColor = "white" }) {
   return (
     <Flex
-      p={4}
-      bg={"rbga(0,0,0,0.6)"}
-      color={"white"}
+      p={2}
+      bg={{
+        base: "rgba(81,255,240,0.77)",
+        _dark: "rgba(0, 0, 0, 0.6)",
+      }}
+      color={{ base: "black", _dark: "white" }}
+      backdropFilter={"blur(6px)"}
       position={"fixed"}
       w={"100%"}
-      zIndex={"100%"}
+      zIndex={100}
     >
-      <Box fontWeight={"bold"}>雾雨MC</Box>
+      <Box fontWeight={"bold"}>{`雾雨MC`}</Box>
       <Spacer />
       <Flex gap={4}>
-        <Link href={"/"}>主页</Link>
-        <Link href={"/docs"}>文档</Link>
-        <Link href={"/about"}>关于</Link>
+        <Link href={"/"}>{`主页`}</Link>
+        <Link href={"/docs"}>{`文档`}</Link>
+        <Link href={"/about"}>{`关于`}</Link>
       </Flex>
       <Spacer />
-      <Flex gap={2}>
-        <IconButton
-          icon={<FaGithub />}
-          onClick={window.open("https//github.com/crystelf/fograin-web")}
-          isRound
-          size={"sm"}
-        />
-        <IconButton
-          icon={<FaDiscord />}
-          onClick={window.open("https//lab.crystelf.top")}
-          isRound
-          size={"sm"}
-        />
-      </Flex>
+      <ColorModeButton />
     </Flex>
   );
 }
