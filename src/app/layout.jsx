@@ -9,3 +9,8 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export const metadata = {
+  title: "雾雨生电服务器",
+  description: "一个充满创造与活力的 Minecraft 社区服务器",
+};

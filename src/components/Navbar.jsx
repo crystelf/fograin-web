@@ -1,4 +1,4 @@
-import { Flex, Box, Spacer, Link } from "@chakra-ui/react";
+import { Flex, Box, Spacer, Link, Image } from "@chakra-ui/react";
 import { ColorModeButton } from "@/components/ui/color-mode";
 
 export default function Navbar({ iconColor = "white" }) {
